@@ -1,6 +1,6 @@
 # 🧠 AI Mentor just like our Rohit Bhaiya — Hackathon Project 
 
-**Live Demo:**[https://rohitnegi-chatbott.netlify.app/](https://rohitnegi-chatbott.netlify.app/)
+**Live Demo:**  [https://rohitnegi-chatbott.netlify.app/](https://rohitnegi-chatbott.netlify.app/)
 
 An innovative AI mentor chatbot that simulates **human-like behavior** using prompt engineering. The bot takes on the persona of **Rohit Bhaiya**, a mentor figure who guides users like a trusted elder brother, helping them in coding, interview prep, and concept clarity — all through natural, human-like conversations.
 
