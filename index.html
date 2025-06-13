@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chat with Rohit Bhaiya - AI Mentor</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Chat history sidebar -->
+    <div id="chat-history">
+        <div class="history-header">
+            <h3>Chat History</h3>
+            <button class="close-history" id="close-history">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div id="history-list"></div>
+        <button id="new-chat-btn">
+            <i class="fas fa-plus"></i> New Chat
+        </button>
+    </div>
+
+    <div id="chat-container">
+        <!-- Feature badge -->
+        <div class="feature-badge">PREMIUM AI MENTOR</div>
+        
+        <header id="chat-header">
+            <button id="history-btn" class="tool-button" title="Chat History">
+                <i class="fas fa-history"></i>
+            </button>
+            
+            <a href="https://www.youtube.com/@Rohit_Negi/featured" target="_blank" class="profile-link">
+                <div id="profile-pic">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSYb4JdbO81iUJ4SciqHxRYyuGjvbfM-bZHg&s" alt="Rohit Bhaiya Profile">
+                </div>
+                <div id="header-title">
+                    <h1>Rohit Bhaiya</h1>
+                    <p>GATE AIR 202, ex-Uber | AI Mentor</p>
+                </div>
+            </a>
+            
+            <button id="new-chat-header-btn" class="tool-button" title="New Chat">
+                <i class="fas fa-plus"></i>
+            </button>
+            
+            <button id="features-btn" class="tool-button" title="Features">
+                <i class="fas fa-crown"></i> Features
+            </button>
+            
+            <div class="switch-container">
+                <span class="switch-text">Code Mentor</span>
+                <label class="switch">
+                    <input type="checkbox" id="mentor-mode">
+                    <span class="slider"></span>
+                </label>
+            </div>
+        </header>
+        
+        <!-- Chat messages area -->
+        <div id="chat-box"></div>
+        
+        <!-- Input area -->
+        <div id="input-area">
+            <div class="voice-message-ui" id="voice-ui">
+                <span>Recording...</span>
+                <div class="waveform">
+                    <div class="waveform-bar"></div>
+                    <div class="waveform-bar"></div>
+                    <div class="waveform-bar"></div>
+                    <div class="waveform-bar"></div>
+                    <div class="waveform-bar"></div>
+                </div>
+                <button id="cancel-voice" title="Cancel Recording">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <form id="input-form">
+                <button type="button" id="voice-button" class="chat-button" title="Voice Message">
+                    <i class="fas fa-microphone"></i>
+                </button>
+                <input type="text" id="message-input" placeholder="Ask me anything about coding, DSA, or career..." autocomplete="off" required>
+                <button id="send-button" class="chat-button" type="submit" title="Send Message">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+    
+    <!-- Feature tour popup -->
+    <div class="overlay" id="overlay"></div>
+    <div class="feature-tour" id="feature-tour">
+        <h3>🚀 Premium Features 🚀</h3>
+        <p>Unlock the full potential of your AI mentor like Rohit Bhaiya with these premium features:</p>
+        <ul>
+            <li><i class="fas fa-code"></i> <strong>Code Mentor Mode</strong> - Get expert help with code examples and debugging</li>
+            <li><i class="fas fa-history"></i> <strong>Chat History</strong> - Save and access all your previous conversations upto 5</li>
+            <li><i class="fas fa-microphone"></i> <strong>Voice Messaging</strong> - Speak naturally and get instant responses</li>
+            <li><i class="fas fa-bug"></i> <strong>Code Debugging</strong> - Advanced error checking and optimizations</li>
+            <li><i class="fas fa-user-tie"></i> <strong>Rohit Bhaiya Style</strong> - First thought principle using explaination/li>
+            <li><i class="fas fa-question-circle"></i> <strong>Doubt Solving</strong> - Instant clarification of concepts</li>
+            <li><i class="fas fa-brain"></i> <strong>Personalized Learning</strong> - Adapts to your skill level and goals</li>
+        </ul>
+        <button id="close-tour">Got It!</button>
+    </div>
+
+    <!-- Delete confirmation popup -->
+    <div class="confirmation-modal" id="delete-confirm">
+        <div class="modal-content">
+            <h3>Delete Chat</h3>
+            <p>Are you sure you want to delete this chat? This action cannot be undone.</p>
+            <div class="modal-buttons">
+                <button id="confirm-delete">Yes, Delete</button>
+                <button id="cancel-delete">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Edit chat title popup -->
+    <div class="confirmation-modal" id="edit-title-modal">
+        <div class="modal-content">
+            <h3>Edit Chat Title</h3>
+            <input type="text" id="new-chat-title" placeholder="Enter new chat title" maxlength="50">
+            <div class="modal-buttons">
+                <button id="save-title">Save</button>
+                <button id="cancel-edit">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
